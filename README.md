@@ -9,6 +9,19 @@ so it quits early or rambles past the deadline. This moves the clock **out of th
 Hermes' cron scheduler. Each tick checks the real wall-clock, does one bounded research step, saves
 to disk, and exits. Crash-proof, resumable, and the full time window goes to widening coverage.
 
+## Install
+
+```bash
+hermes skills tap add Kaushal-Panchal/hermes-long-research
+hermes skills install long-research
+```
+
+Or install directly from URL:
+
+```bash
+hermes skills install https://raw.githubusercontent.com/Kaushal-Panchal/hermes-long-research/main/skills/long-research/SKILL.md --name long-research
+```
+
 ---
 
 ## How it works
@@ -49,16 +62,28 @@ A research folder holds five files:
 
 ## Setup (≈3 minutes)
 
+**Option A — Tap install (recommended):**
+
+```bash
+hermes skills tap add Kaushal-Panchal/hermes-long-research
+hermes skills install long-research
+```
+
+**Option B — Manual clone (if you want to hack on it):**
+
 ```bash
 # 1. Clone to your home directory (the skill expects ~/LongResearches)
-git clone https://github.com/<you>/hermes-long-research.git ~/LongResearches
+git clone https://github.com/Kaushal-Panchal/hermes-long-research.git ~/LongResearches
 
 # 2. Tell Hermes where the skill is — add to ~/.hermes/config.yaml:
 #    skills:
 #      external_dirs:
 #        - ~/LongResearches/skills
+```
 
-# 3. Start the engine (keep it alive; tmux survives terminal close)
+**Then start the engine:**
+
+```bash
 tmux new -s hermes-gateway 'hermes gateway run'   # Ctrl-b d to detach
 hermes gateway status                              # "Gateway is running" = good
 ```

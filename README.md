@@ -9,6 +9,8 @@ so it quits early or rambles past the deadline. This moves the clock **out of th
 Hermes' cron scheduler. Each tick checks the real wall-clock, does one bounded research step, saves
 to disk, and exits. Crash-proof, resumable, and the full time window goes to widening coverage.
 
+![hermes-long-research hero](assets/hero.png)
+
 ## Install
 
 ```bash

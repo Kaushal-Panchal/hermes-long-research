@@ -1,0 +1,6 @@
+name: long-research-cost
+version: "1.0"
+description: >
+  Appends per-tick token usage (and cost when the model reports it) into each
+  LongResearches run's log.md, via a post_llm_call hook. FINALIZE sums these
+  lines into a "Run cost" block in report.md. No database, no network.

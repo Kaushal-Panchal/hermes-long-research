@@ -1,0 +1,13 @@
+# Your research lives here — never commit private research data
+active/
+archive/
+
+# Learned lessons are per-user, local
+LESSONS.md
+skills/long-research-lessons/
+
+# OS / editor / python
+.DS_Store
+.obsidian/
+__pycache__/
+*.pyc
